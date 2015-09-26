@@ -5,10 +5,10 @@ var clean = require('gulp-clean');
 var babel = require('gulp-babel');
 var browserify = require('gulp-browserify');
 var sourcemaps = require('gulp-sourcemaps');
+var uglify = require('gulp-uglify');
 
-var entry = 'index.js';
-var src = [ entry, 'src/**/*.js' ];
-var srcOption = { base: './' };
+var src = [ 'src/**/*.js' ];
+var srcOption = { base: 'src' };
 var dest = './dist';
 
 
@@ -27,13 +27,14 @@ gulp.task('node', ['clean'], function () {
 });
 
 gulp.task('browser', ['clean'], function () {
-    return gulp.src(entry, srcOption)
-        .pipe(sourcemaps.init())
+    return gulp.src(src, srcOption)
+        // .pipe(sourcemaps.init())
         .pipe(browserify({
-            insertGlobals : true,
+            insertGlobals : false,
             debug : !gulp.env.production,
             transform: ['babelify']
         }))
-        .pipe(sourcemaps.write('.', { includeContent: false, sourceRoot: '..' }))
+		.pipe(uglify())
+        // .pipe(sourcemaps.write('.', { includeContent: false, sourceRoot: '..' }))
         .pipe(gulp.dest(dest));
 });
