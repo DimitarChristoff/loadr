@@ -8,13 +8,12 @@
 	 */
 	class Loadr {
 
-
 		/**
 		 * @constructs Loadr
 		 * @param element
 		 * @param options
 		 */
-		constructor(element, options = {}) {
+		constructor(element, options = {}){
 			/**
 			 *
 			 * @type {{delay: number, fade: boolean}}
@@ -48,18 +47,22 @@
 			return this;
 		}
 
+		get(r){
+			while ((r = this.rand()) == this.last);
+
+			return messages[this.last = r];
+		}
+
 		/**
 		 * Internal loader of a new message that is different from last one.
-		 * @param {*=} r
 		 * @param {*=} o
 		 * @returns {Loadr}
 		 * @private
 		 */
-		_setLoadMessage(r, o){
+		_setLoadMessage(o){
 			o = this.options;
-			while ((r = this.rand()) == this.last);
 
-			this.element.innerHTML = o.before + messages[this.last = r] + o.after;
+			this.element.innerHTML = o.before + this.get() + o.after;
 			return this;
 		}
 
@@ -72,7 +75,7 @@
 
 	}
 
-	if (typeof define === 'function' && define.amd) {
+	if (typeof define === 'function' && define.amd){
 		define(Loadr);
 	} else {
 		window.Loadr = Loadr;
