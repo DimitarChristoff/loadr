@@ -44,7 +44,9 @@
 		 */
 		start(){
 			this._setLoadMessage();
-			this.timer = setInterval(this._setLoadMessage.bind(this), this.options.delay);
+			this.timer = setInterval(() => {
+				this._setLoadMessage();
+			}, this.options.delay);
 			return this;
 		}
 
@@ -57,6 +59,11 @@
 			return this;
 		}
 
+		/**
+		 * Just return a message that is different from the last message returned.
+		 * @param {*=} r
+		 * @returns {String}
+		 */
 		get(r){
 			while ((r = this.rand()) == this.last);
 
