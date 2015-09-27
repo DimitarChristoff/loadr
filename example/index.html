@@ -44,11 +44,11 @@
 
 		(function(){
 			// manually doing stuff, just getting new messages
-			var i = new Loadr(document.querySelector('section.three'));
+			var i = new Loadr();
 
-			var i3s = i.element.querySelectorAll('div.loader-text > div'),
+			var i3s = document.querySelectorAll('section.three div.loader-text > div'),
 				last = 0,
-				spinner = i.element.querySelector('.sk-spinner-pulse'),
+				spinner = document.querySelector('section.three .sk-spinner-pulse'),
 				getNewMessages = function(){
 					i3s[last].innerHTML = i.get();
 					i3s[last].classList.remove('hide');

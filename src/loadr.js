@@ -10,8 +10,8 @@
 
 		/**
 		 * @constructs Loadr
-		 * @param element
-		 * @param options
+		 * @param {HTMLElement=} element
+		 * @param {Object=} options
 		 */
 		constructor(element, options = {}){
 			/**
@@ -24,7 +24,7 @@
 				after: '...'
 			}, options);
 
-			this.element = element;
+			element && (this.element = element);
 		}
 
 		/**
