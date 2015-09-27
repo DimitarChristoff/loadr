@@ -16,11 +16,10 @@
 		constructor(element, options = {}){
 			/**
 			 *
-			 * @type {{delay: number, fade: boolean}}
+			 * @type {{delay: number, before: string, after: string}}
 			 */
 			Object.assign(this.options = {
 				delay: 1000,
-				fade: true,
 				before: '',
 				after: '...'
 			}, options);
