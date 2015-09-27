@@ -21,7 +21,9 @@
 			 */
 			Object.assign(this.options = {
 				delay: 1000,
-				fade: true
+				fade: true,
+				before: '',
+				after: '...'
 			}, options);
 
 			this.element = element;
@@ -31,7 +33,8 @@
 		 * Starts looping messages into an element
 		 * @returns {Loadr}
 		 */
-		start() {
+		start(){
+			this._setLoadMessage();
 			this.timer = setInterval(this._setLoadMessage.bind(this), this.options.delay);
 			return this;
 		}
@@ -40,7 +43,7 @@
 		 * Stops looping of messages
 		 * @returns {Loadr}
 		 */
-		stop() {
+		stop(){
 			clearTimeout(this.timer);
 			return this;
 		}
@@ -48,20 +51,22 @@
 		/**
 		 * Internal loader of a new message that is different from last one.
 		 * @param {*=} r
+		 * @param {*=} o
 		 * @returns {Loadr}
 		 * @private
 		 */
-		_setLoadMessage(r) {
+		_setLoadMessage(r, o){
+			o = this.options;
 			while ((r = this.rand()) == this.last);
 
-			this.element.innerHTML = messages[this.last = r] + '...';
+			this.element.innerHTML = o.before + messages[this.last = r] + o.after;
 			return this;
 		}
 
 		/**
 		 * Generates a random number within the size of the messages
 		 */
-		rand() {
+		rand(){
 			return ~~(Math.random() * messages.length)
 		}
 

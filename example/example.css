@@ -1,0 +1,47 @@
+@import "spinkit.css";
+@import url(https://fonts.googleapis.com/css?family=Anton);
+
+body {
+    margin: 0;
+    font-family: "Helvetic Neue", Helvetica, Arial;
+    font-size: 12px;
+}
+
+section {
+    border-bottom: 1px solid #444;
+    box-shadow: inset 0 0 2px rgba(255,255,255,.7), 0 1px 2px rgba(0,0,0,.5);
+    padding: 10px;
+}
+
+
+.one {
+    background: linear-gradient(#888, #666);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.two {
+    /*text-transform: uppercase;*/
+    font-size: 20px;
+    background: linear-gradient(#800, #600);
+    color: white;
+    text-shadow: 1px 1px 1px rgba(0,0,0,.5);
+}
+
+.sk-three-bounce {
+    display: inline-block;
+    margin: 0;
+}
+
+.loader-text {
+    display: inline-block;
+    font-family: Anton;
+}
+
+.sk-three-bounce > div.sk-child {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+    background: white;
+}

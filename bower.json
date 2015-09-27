@@ -1,7 +1,7 @@
 {
-  "name": "package",
+  "name": "loadr",
   "version": "0.0.0",
-  "description": "nice gulp babel es6 module",
+  "description": "Messages while loading",
   "dependencies": {},
   "ignore": [
     "**/.*",

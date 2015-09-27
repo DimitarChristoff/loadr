@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Loadr examples</title>
+    <link rel="stylesheet" href="example.css"/>
+    <script src="../dist/loadr.js"></script>
+</head>
+<body>
+<section class="one">
+
+</section>
+<section class="two">
+    <div class="sk-three-bounce">
+        <div class="sk-child sk-bounce1"></div>
+        <div class="sk-child sk-bounce2"></div>
+        <div class="sk-child"></div>
+    </div>
+    <div class="loader-text"></div>
+</section>
+
+<script>
+    (function(Loadr){
+        var i = new Loadr(document.querySelector('section.one'));
+        i.start();
+
+        var i = new Loadr(document.querySelector('section.two div.loader-text'), {
+            delay: 1400
+        });
+        i.start();
+
+    }(Loadr));
+</script>
+</body>
+</html>
