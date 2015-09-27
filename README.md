@@ -54,7 +54,9 @@ $ bower install loadr
 
 ## credits
 
-Messages taken from VideoStream for Chromecast plugin for Chrome.
+Messages taken from VideoStream for Chromecast plugin for Chrome, who probably took them from a pastebin I have found. No idea, thanks to whoever wrote them.
+
+## messages
 
 Full list (also available via `instance.messages`):
 
