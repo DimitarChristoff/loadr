@@ -51,14 +51,19 @@
 
 <p>Not just another spinner.</p>
 
-<p><a href="example/sshot.png"><img src="example/sshot.png" alt="Example"></a></p>
+<p><a href="http://jsfiddle.net/dimitar/kvxyc1bg/"><img src="https://rawgit.com/DimitarChrisoff/loadr/master/example/sshot.png" alt="Example"></a></p>
 
 <p>It can auto rotate messages given an element or just return messages.</p>
 
 <p><a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a>
 <a href="https://david-dm.org/DimitarChristoff/loadr#info=devDependencies"><img src="https://david-dm.org/DimitarChristoff/loadr/dev-status.svg" alt="devDependency Status"></a></p>
 
-<p>Works under ES6 or ES5</p>
+<p>Works under ES6 or ES5, browser or nodejs -- no external dependencies.</p>
+
+<h3>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h3>
+
+<p>Typical use with defaults just changing text</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>);
 
@@ -66,12 +71,34 @@ instance.<span class="pl-c1">start</span>();
 <span class="pl-c">// ...</span>
 instance.<span class="pl-c1">stop</span>();</pre></div>
 
-<p>Change options</p>
+<p>Change some options</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>, {
     delay<span class="pl-k">:</span> <span class="pl-c1">2000</span>,
     before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse"&gt;&lt;/i&gt; <span class="pl-pds">'</span></span>
 });</pre></div>
+
+<p>Just get random excuse messages</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>();
+
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(i.get());</pre></div>
+
+<h3>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>installing</h3>
+
+<p>You can install via npm, bower or download the script.</p>
+
+<pre><code>$ npm install randloadr
+$ bower install loadr
+</code></pre>
+
+<p><code>src/loadr.js</code> is ES6 raw, <code>dist/loadr.js</code> is the minified ES5 version.</p>
+
+<h3>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>credits</h3>
+
+<p>Messages taken from VideoStream for Chromecast plugin for Chrome.</p>
       </section>
 
       <footer>
