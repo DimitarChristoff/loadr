@@ -2,7 +2,7 @@
 
 Not just another spinner.
 
-[![Example](https://rawgit.com/DimitarChrisoff/loadr/master/example/sshot.png)](http://jsfiddle.net/dimitar/kvxyc1bg/)
+[![Example](https://rawgit.com/DimitarChristoff/loadr/master/example/sshot.png)](http://jsfiddle.net/dimitar/kvxyc1bg/)
 
 It can auto rotate messages given an element or just return messages.
 
