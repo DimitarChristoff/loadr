@@ -1,6 +1,6 @@
 {
   "name": "loadr",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Not just another spinner",
   "main": "dist/loadr.js",
   "repository": {
