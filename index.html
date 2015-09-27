@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
+
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Loadr by DimitarChristoff</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/DimitarChristoff/loadr">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Loadr</h1>
+            <h2>Loading messages can be fun, not just spinners</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/DimitarChristoff/loadr/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/DimitarChristoff/loadr/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <h1>
+<a id="loadr" class="anchor" href="#loadr" aria-hidden="true"><span class="octicon octicon-link"></span></a>loadr</h1>
+
+<p>Not just another spinner.</p>
+
+<p><a href="example/sshot.png"><img src="example/sshot.png" alt="Example"></a></p>
+
+<p>It can auto rotate messages given an element or just return messages.</p>
+
+<p><a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a>
+<a href="https://david-dm.org/DimitarChristoff/loadr#info=devDependencies"><img src="https://david-dm.org/DimitarChristoff/loadr/dev-status.svg" alt="devDependency Status"></a></p>
+
+<p>Works under ES6 or ES5</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>);
+
+instance.<span class="pl-c1">start</span>();
+<span class="pl-c">// ...</span>
+instance.<span class="pl-c1">stop</span>();</pre></div>
+
+<p>Change options</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>, {
+    delay<span class="pl-k">:</span> <span class="pl-c1">2000</span>,
+    before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse"&gt;&lt;/i&gt; <span class="pl-pds">'</span></span>
+});</pre></div>
+      </section>
+
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a> can be found on <a href="https://github.com/DimitarChristoff/loadr">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
+      </footer>
+
+    </div>
+
+    
+  </body>
+</html>
