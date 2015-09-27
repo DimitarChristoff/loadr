@@ -4,40 +4,28 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Loadr by DimitarChristoff</title>
+
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-
+    <div class="wrapper">
       <header>
         <h1>Loadr</h1>
         <p>Loading messages can be fun, not just spinners</p>
+        <p class="view"><a href="https://github.com/DimitarChristoff/loadr">View the Project on GitHub <small>DimitarChristoff/loadr</small></a></p>
+        <ul>
+          <li><a href="https://github.com/DimitarChristoff/loadr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/DimitarChristoff/loadr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/DimitarChristoff/loadr">View On <strong>GitHub</strong></a></li>
+        </ul>
       </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/DimitarChristoff/loadr" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/DimitarChristoff/loadr/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/DimitarChristoff/loadr/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
       <section>
         <h1>
 <a id="loadr" class="anchor" href="#loadr" aria-hidden="true"><span class="octicon octicon-link"></span></a>loadr</h1>
@@ -53,8 +41,8 @@
 
 <p>Works under ES6 or ES5, browser or nodejs -- no external dependencies.</p>
 
-<h3>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h3>
+<h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h2>
 
 <p>Typical use with defaults just changing text</p>
 
@@ -77,8 +65,8 @@ instance.<span class="pl-c1">stop</span>();</pre></div>
 
 <span class="pl-en">console</span>.<span class="pl-c1">log</span>(i.get());</pre></div>
 
-<h3>
-<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>installing</h3>
+<h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>installing</h2>
 
 <p>You can install via npm, bower or download the script.</p>
 
@@ -88,16 +76,228 @@ $ bower install loadr
 
 <p><code>src/loadr.js</code> is ES6 raw, <code>dist/loadr.js</code> is the minified ES5 version.</p>
 
-<h3>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>credits</h3>
+<h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>credits</h2>
 
-<p>Messages taken from VideoStream for Chromecast plugin for Chrome.</p>
+<p>Messages taken from VideoStream for Chromecast plugin for Chrome, who probably took them from a pastebin I have found. No idea, thanks to whoever wrote them.</p>
+
+<h2>
+<a id="messages" class="anchor" href="#messages" aria-hidden="true"><span class="octicon octicon-link"></span></a>messages</h2>
+
+<p>Full list (also available via <code>instance.messages</code>):</p>
+
+<blockquote>
+<ul>
+<li>Reticulating Splines</li>
+<li>Gathering Goblins</li>
+<li>Lifting Weights</li>
+<li>Pushing Pixels</li>
+<li>Formulating Plan</li>
+<li>Taking Break</li>
+<li>Herding Ducks</li>
+<li>Feeding Developers</li>
+<li>Fishing for Change</li>
+<li>Searching for Dancers</li>
+<li>Waking Up Gnomes</li>
+<li>Playing Chess</li>
+<li>Building Igloos</li>
+<li>Converting Celsius</li>
+<li>Scanning Power Level</li>
+<li>Delivering Presents</li>
+<li>Finding Dragon Balls</li>
+<li>Firing Lasers</li>
+<li>Party Rocking</li>
+<li>Walking up to the club</li>
+<li>Righting wrongs</li>
+<li>Building Lego</li>
+<li>Assembling Avengers</li>
+<li>Turning Down for What</li>
+<li>Reaching 88mph</li>
+<li>Pondering Existence</li>
+<li>Battling Robots</li>
+<li>Smashing Pots</li>
+<li>Stomping Goombas</li>
+<li>Doing Donuts</li>
+<li>Entering Danger Zone</li>
+<li>Talking to Mom</li>
+<li>Chasing Squirrels</li>
+<li>Setting Phasers to Stun</li>
+<li>Doing Macarena</li>
+<li>Dropping Bass</li>
+<li>Removing Biebers</li>
+<li>Performing Magic</li>
+<li>Autotuning Kanye</li>
+<li>Waxing Legs</li>
+<li>Invading Space</li>
+<li>Levelling Up</li>
+<li>Generating Map</li>
+<li>Conquering France</li>
+<li>Piloting Tardis</li>
+<li>Destroying Deathstar</li>
+<li>Typing Letters</li>
+<li>Making Code</li>
+<li>Running Marathon</li>
+<li>Shooting Pucks</li>
+<li>Kicking Field Goals</li>
+<li>Fighting Bad Guys</li>
+<li>Driving Batmobile</li>
+<li>Warming Up Kryptonite</li>
+<li>Popping Popcorn</li>
+<li>Creating Hashes</li>
+<li>Spawning Boss</li>
+<li>Evaluating Life Choices</li>
+<li>Eating Ramen</li>
+<li>Re-heating Leftovers</li>
+<li>Petting Kittens</li>
+<li>Walking Puppies</li>
+<li>Catching Z’s</li>
+<li>Jumping Rope</li>
+<li>Declaring Variables</li>
+<li>Yessing Doge</li>
+<li>Recycling Memes</li>
+<li>Tipping Fedora</li>
+<li>Walking Runway</li>
+<li>Counting to Ten</li>
+<li>Booting Native Client</li>
+<li>Launching App</li>
+<li>Drawing Icons</li>
+<li>Reading Instructions</li>
+<li>Finding Screws</li>
+<li>Completing Puzzles</li>
+<li>Generating Volume Slider</li>
+<li>Brightening Orange</li>
+<li>Ordering Pizza</li>
+<li>You Look Good Today</li>
+<li>Clearing Screen</li>
+<li>Stirring Pot</li>
+<li>Mashing Potatoes</li>
+<li>Banishing Evil</li>
+<li>Taking Selfies</li>
+<li>Accelerating Disks</li>
+<li>Benching Network</li>
+<li>Rocking Out</li>
+<li>Grinding Mage</li>
+<li>Studying Calculus</li>
+<li>Playing N64</li>
+<li>Racing GoKarts</li>
+<li>Defeating Creepers</li>
+<li>Blowing Game Cartridge</li>
+<li>Choosing Pikachu</li>
+<li>Postponing Half Life 3</li>
+<li>Rushing Zergs</li>
+<li>Rescuing Hostages</li>
+<li>Typing Konami Code</li>
+<li>Building Snowman</li>
+<li>Letting it Snow</li>
+<li>Burning HDMI Cords</li>
+<li>Applying Filters</li>
+<li>Taking Screenshot</li>
+<li>Shaving Mustache</li>
+<li>Growing Beard</li>
+<li>Baking Muffins</li>
+<li>Iterating Javascript</li>
+<li>Attracting Venture Capital</li>
+<li>Disrupting Industry</li>
+<li>Tweeting Hashtags</li>
+<li>Encrypting Lines</li>
+<li>Obfuscating C</li>
+<li>Enhancing License Plate</li>
+<li>Running Diagnostic</li>
+<li>Warming Hyperdrive</li>
+<li>Calibrating Positions</li>
+<li>Calculating Percentages</li>
+<li>Revoking Licenses</li>
+<li>Shedding Core</li>
+<li>Dampening Gravity</li>
+<li>Increasing Power</li>
+<li>Checking Sensors</li>
+<li>Indexing RSS</li>
+<li>Programming PCI</li>
+<li>Determining USB Position</li>
+<li>Connecting to Bus</li>
+<li>Inverting Ports</li>
+<li>Bypassing Capacitor</li>
+<li>Reversing Bandwidth Throttle</li>
+<li>Testing AI</li>
+<li>Virtualizing Microchip</li>
+<li>Emulating Playstation</li>
+<li>Synthesizing Drivers</li>
+<li>Structuring Chlorophyll</li>
+<li>Watering Plants</li>
+<li>Ingesting Caffeine</li>
+<li>Chugging Redbull</li>
+<li>Parsing System</li>
+<li>Navigating Arrays</li>
+<li>Searching Google</li>
+<li>Overflowing Stack</li>
+<li>Compiling Binaries</li>
+<li>Answering Emails</li>
+<li>Migrating CSS</li>
+<li>Backing Up Primaries</li>
+<li>Rendering Dialogs</li>
+<li>Reading RSS</li>
+<li>Compressing Data</li>
+<li>Rejecting Cloud</li>
+<li>Evaluating Weissman Score</li>
+<li>Purging Local Storage</li>
+<li>Leaking Memory</li>
+<li>Scripting Python</li>
+<li>Grunting Ruby</li>
+<li>Benching RAM</li>
+<li>Determining Auxiliaries</li>
+<li>Jiggling Internet</li>
+<li>Ejecting Floppy</li>
+<li>Fluctuating Objects</li>
+<li>Spiking Reactor Core</li>
+<li>Firing Bosons</li>
+<li>Testing Processor</li>
+<li>Debugging Prompts</li>
+<li>Connecting Floats</li>
+<li>Rounding Integers</li>
+<li>Pronouncing Gigawatt</li>
+<li>Inverting Transponders</li>
+<li>Bypassing Silicon</li>
+<li>Raising Funds</li>
+<li>Caching Logs</li>
+<li>Dithering Broadband</li>
+<li>Eating Poutine</li>
+<li>Rolling Rims to Win</li>
+<li>Begging for Change</li>
+<li>Chasing Waterfalls</li>
+<li>Pumping Gas</li>
+<li>Emptying Pipes</li>
+<li>Hitting Piñata</li>
+<li>Unleashing Freedom</li>
+<li>Airbrushing Actors</li>
+<li>FIling Taxes</li>
+<li>Powering Mitochondria</li>
+<li>Calculating Qi charge</li>
+<li>Completing Geometry</li>
+<li>Turning in Algebra</li>
+<li>Solving for X</li>
+<li>Benching Wattage</li>
+<li>Kludging Playback Bar</li>
+<li>Stringifying Json</li>
+<li>Consuming Spaghetti Code</li>
+<li>Deleting Comments</li>
+<li>Transitioning to Django</li>
+<li>Learning to Code</li>
+<li>Battling Feature Creep</li>
+<li>Losing Flappy Bird</li>
+<li>Celebrating Good Times</li>
+<li>Sharpening Pencils</li>
+<li>Automating Processes</li>
+<li>Attacking Godzilla</li>
+<li>Carbonating Soda</li>
+<li>Thinking of Witty Text</li>
+</ul>
+</blockquote>
       </section>
-      <footer>
-        <p>Project maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
-      </footer>
     </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
     <!--[if !IE]><script>fixScale(document);</script><![endif]-->
     
   </body>
