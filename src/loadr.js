@@ -93,7 +93,7 @@
 	}
 
 	if (typeof define === 'function' && define.amd){
-		define(Loadr);
+		define(() => Loadr);
 	} else {
 		window.Loadr = Loadr;
 	}
