@@ -1,6 +1,6 @@
 # loadr
 
-Not just another spinner.
+Not just another spinner. Keep your visitors amused while your app is loading something. Over 200 random messages to show!
 
 [![Example](https://rawgit.com/DimitarChristoff/loadr/master/example/sshot.png)](http://jsfiddle.net/dimitar/kvxyc1bg/)
 
