@@ -87,7 +87,7 @@
 		 * Generates a random number within the size of the messages
 		 */
 		rand(){
-			return ~~(Math.random() * messages.length)
+			return ~~(Math.random() * messages.length);
 		}
 
 	}

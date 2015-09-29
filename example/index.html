@@ -82,7 +82,7 @@
 			})();
 
 			let i = new Loadr(document.querySelector('section.four')),
-				max = document.body.offsetWidth,
+				max = document.body.offsetWidth - 200,
 				divs = [];
 
 			setInterval(() => {
@@ -93,7 +93,7 @@
 				div.className = 'loadr-slug fade-out'
 				div.innerHTML = i.get();
 
-				let x = ~~(Math.random()*max) - 200,
+				let x = ~~(Math.random()*max),
 					y = ~~(Math.random()*255);
 
 				// div.style.transform = `translate3d(${x}px, ${y}px, 0);`;

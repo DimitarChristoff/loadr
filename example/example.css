@@ -11,13 +11,38 @@ section {
 	border-bottom: 1px solid #444;
 	box-shadow: inset 0 0 2px rgba(255, 255, 255, .7), 0 1px 2px rgba(0, 0, 0, .5);
 	padding: 10px;
+	margin-bottom: 5px;
+	position: relative;
 }
 
-.one {
-	background: linear-gradient(#888, #666);
-	color: white;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+section:after {
+	position: absolute;
+	right: 10px;
+	top: 0;
+	width: 120px;
+	content: 'section';
+	background: #fff;
+	border: 1px solid #aaa;
+	border-top: none;
+	font-size: 8px;
+	text-align: center;
+	color: black;
+	text-shadow: none;
+	box-shadow: inset 0 0 1px rgba(0, 0, 0, .2);
 }
+
+
+.one {
+	background: linear-gradient(#fff, #ccc);
+	color: #500;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	z-index: 10;
+}
+
+.one:after {
+	content: 'example 1: plain (defaults)'
+}
+
 
 .two {
 	/*text-transform: uppercase;*/
@@ -25,6 +50,11 @@ section {
 	background: linear-gradient(#800, #600);
 	color: white;
 	text-shadow: 1px 1px 1px rgba(0, 0, 0, .5);
+	transform: translateY(-5px);
+}
+
+.two:after {
+	content: 'example 2: dots as "before"'
 }
 
 .sk-three-bounce {
@@ -48,7 +78,12 @@ section {
 .three {
 	box-sizing: border-box;
 	font-size: 32px;
-	background: yellow;
+	background: linear-gradient(#fff, #ccc);
+	transform: translateY(-10px);
+}
+
+.three:after {
+	content: 'example 3: manual animationend'
 }
 
 .three .loader-text {
@@ -67,6 +102,7 @@ section {
 	right: 0;
 	text-align: center;
 	position: absolute;
+	text-shadow: 1px 1px 1px rgba(255, 255, 255, .7);
 }
 
 .three .loader-text > div.hide {
@@ -74,7 +110,8 @@ section {
 }
 
 .four {
-	background: linear-gradient(#fff, #cccc99);
+	transform: translateY(-15px);
+	background: #fff;
 	min-height: 300px;
 	position: relative;
 }
@@ -85,9 +122,14 @@ section {
 	opacity: 1;
 	font-size: 24px;
 	font-family: anton;
-	text-shadow: 0px 0px 1px rgba(0,0,0,.5);
+	text-shadow: 0px 0px 1px rgba(0, 0, 0, .5);
 }
 
 .four .loadr-slug.fade-out {
 	opacity: 0;
+}
+
+
+.four:after {
+	content: 'example 4: random messages'
 }
