@@ -1,14 +1,15 @@
 # loadr
 
-Not just another spinner. Keep your visitors amused while your app is loading something. Over 200 random messages to show!
-
-[![Example](https://rawgit.com/DimitarChristoff/loadr/master/example/sshot.png)](http://jsfiddle.net/dimitar/kvxyc1bg/)
-
-It can auto rotate messages given an element or just return messages.
-
 [![Dependency Status](https://david-dm.org/DimitarChristoff/loadr.svg)](https://david-dm.org/DimitarChristoff/loadr)
 [![devDependency Status](https://david-dm.org/DimitarChristoff/loadr/dev-status.svg)](https://david-dm.org/DimitarChristoff/loadr#info=devDependencies)
 
+Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!
+
+[![Example](https://rawgit.com/DimitarChristoff/loadr/master/example/loadr.gif)](http://jsfiddle.net/dimitar/kvxyc1bg/)
+
+[See example in JSfiddle](http://jsfiddle.net/dimitar/kvxyc1bg/)
+
+It can auto rotate messages given an element or just return random messages.
 
 Works under ES6 or ES5, browser or nodejs -- no external dependencies.
 
