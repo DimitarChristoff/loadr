@@ -2,7 +2,7 @@
   "name": "randloadr",
   "version": "1.0.1",
   "description": "Not just another spinner",
-  "main": "dist/loadr.js",
+  "main": "src/loadr.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/DimitarChristoff/loadr.git"
