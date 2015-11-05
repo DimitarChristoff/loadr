@@ -1,6 +1,6 @@
 {
   "name": "randloadr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Not just another spinner",
   "main": "src/loadr.js",
   "repository": {
