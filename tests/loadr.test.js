@@ -10,8 +10,9 @@ describe('loadr tests', () => {
   });
 
   it('returns a message from predefined messages', () => {
-    const instance = new Loadr();
+    const instance = new Loadr(null, {before: '', after: ''});
     instance.messages = messages;
+    console.log(instance.get())
     expect(messages.indexOf(instance.get())).not.toBe(-1);
   });
 

@@ -10,7 +10,7 @@ class Loadr {
    * @param {HTMLElement=} element
    * @param {Object=} options
    */
-  constructor(element, ...options){
+  constructor(element = null, options = {}){
     /**
      *
      * @type {{delay: number, before: string, after: string}}
@@ -19,7 +19,7 @@ class Loadr {
       delay: 1000,
       before: '',
       after: '...'
-    }, options ? options[0] : {});
+    }, options);
 
     element && (this.element = element);
   }
@@ -50,7 +50,7 @@ class Loadr {
    * @returns {Loadr}
    */
   stop(){
-    clearTimeout(this.timer);
+    clearInterval(this.timer);
 
     return this;
   }
@@ -73,8 +73,8 @@ class Loadr {
    * @returns {Loadr}
    * @private
    */
-  _setLoadMessage(o = this.options){
-    this.element.innerHTML = o.before + this.get() + o.after;
+  _setLoadMessage(){
+    this.element && (this.element.innerHTML = this.get());
 
     return this;
   }
