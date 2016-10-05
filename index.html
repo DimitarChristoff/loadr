@@ -4,46 +4,34 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Loadr by DimitarChristoff</title>
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-dark.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script src="javascripts/main.js"></script>
-    <!--[if lt IE 9]>
-      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
   <body>
-
+    <div class="wrapper">
       <header>
         <h1>Loadr</h1>
         <p>Loading messages can be fun, not just spinners</p>
+
+        <p class="view"><a href="https://github.com/DimitarChristoff/loadr">View the Project on GitHub <small>DimitarChristoff/loadr</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/DimitarChristoff/loadr/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/DimitarChristoff/loadr/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/DimitarChristoff/loadr">View On <strong>GitHub</strong></a></li>
+        </ul>
       </header>
-
-      <div id="banner">
-        <span id="logo"></span>
-
-        <a href="https://github.com/DimitarChristoff/loadr" class="button fork"><strong>View On GitHub</strong></a>
-        <div class="downloads">
-          <span>Downloads:</span>
-          <ul>
-            <li><a href="https://github.com/DimitarChristoff/loadr/zipball/master" class="button">ZIP</a></li>
-            <li><a href="https://github.com/DimitarChristoff/loadr/tarball/master" class="button">TAR</a></li>
-          </ul>
-        </div>
-      </div><!-- end banner -->
-
-    <div class="wrapper">
-      <nav>
-        <ul></ul>
-      </nav>
       <section>
         <h1>
-<a id="loadr" class="anchor" href="#loadr" aria-hidden="true"><span class="octicon octicon-link"></span></a>loadr</h1>
+<a id="loadr" class="anchor" href="#loadr" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>loadr</h1>
 
-<p><a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a>
-<a href="https://david-dm.org/DimitarChristoff/loadr#info=devDependencies"><img src="https://david-dm.org/DimitarChristoff/loadr/dev-status.svg" alt="devDependency Status"></a></p>
+<p><a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a></p>
 
 <p>Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!</p>
 
@@ -56,47 +44,55 @@
 <p>Works under ES6 or ES5, browser or nodejs -- no external dependencies.</p>
 
 <h2>
-<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span class="octicon octicon-link"></span></a>usage</h2>
+<a id="usage" class="anchor" href="#usage" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>usage</h2>
 
-<p>Typical use with defaults just changing text</p>
+<div class="highlight highlight-source-shell"><pre>$ npm i randloadr --save</pre></div>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>);
+<p>Via ES2015+</p>
 
-instance.<span class="pl-c1">start</span>();
+<div class="highlight highlight-source-js"><pre><span class="pl-k">import</span> <span class="pl-smi">Loadr</span> <span class="pl-k">from</span> <span class="pl-s"><span class="pl-pds">'</span>randloadr<span class="pl-pds">'</span></span>; <span class="pl-c">// or require('randloadr')</span>
+
+<span class="pl-k">const</span> <span class="pl-c1">instance</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>));
+<span class="pl-smi">instance</span>.<span class="pl-c1">start</span>();
+<span class="pl-smi">instance</span>.<span class="pl-c1">stop</span>();</pre></div>
+
+<p>In ES5 from global object</p>
+
+<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>));
+
+<span class="pl-smi">instance</span>.<span class="pl-c1">start</span>();
 <span class="pl-c">// ...</span>
-instance.<span class="pl-c1">stop</span>();</pre></div>
+<span class="pl-smi">instance</span>.<span class="pl-c1">stop</span>();</pre></div>
 
 <p>Change some options</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.querySelector(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>, {
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">instance</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>, {
     delay<span class="pl-k">:</span> <span class="pl-c1">2000</span>,
-    before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse"&gt;&lt;/i&gt; <span class="pl-pds">'</span></span>
+    before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse" /&gt; <span class="pl-pds">'</span></span>
 });</pre></div>
 
 <p>Just get random excuse messages</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>();
-
-<span class="pl-en">console</span>.<span class="pl-c1">log</span>(i.get());</pre></div>
+<div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">instance</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>();
+<span class="pl-en">console</span>.<span class="pl-c1">log</span>(<span class="pl-smi">instance</span>.<span class="pl-c1">get</span>());</pre></div>
 
 <h2>
-<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>installing</h2>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>installing</h2>
 
-<p>You can install via npm, bower or download the script.</p>
+<p>You can also install via bower or download the script.</p>
 
-<pre><code>$ npm install randloadr
-$ bower install loadr
+<pre><code>$ bower install loadr
 </code></pre>
 
-<p><code>src/loadr.js</code> is ES6 raw, <code>dist/loadr.js</code> is the minified ES5 version.</p>
+<p><code>src/loadr.js</code> is ES6 raw, <code>dist/loadr.min.js</code> is the minified ES5 version.</p>
 
 <h2>
-<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span class="octicon octicon-link"></span></a>credits</h2>
+<a id="credits" class="anchor" href="#credits" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>credits</h2>
 
 <p>Messages taken from VideoStream for Chromecast plugin for Chrome, who probably took them from a pastebin I have found. No idea, thanks to whoever wrote them.</p>
 
 <h2>
-<a id="messages" class="anchor" href="#messages" aria-hidden="true"><span class="octicon octicon-link"></span></a>messages</h2>
+<a id="messages" class="anchor" href="#messages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>messages</h2>
 
 <p>Full list (also available via <code>instance.messages</code>):</p>
 
@@ -308,11 +304,11 @@ $ bower install loadr
 </blockquote>
       </section>
       <footer>
-        <p>Project maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></small></p>
+        <p>This project is maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script src="javascripts/scale.fix.js"></script>
     
   </body>
 </html>
