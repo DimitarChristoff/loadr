@@ -1,17 +1,16 @@
 {
   "name": "loadr",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Not just another spinner",
   "dependencies": {},
   "ignore": [
     "**/.*",
     "node_modules",
     "bower_components",
-    "test",
     "tests"
   ],
   "main": [
     "src/loadr.js",
-    "dist/loadr.js"
+    "dist/loadr.min.js"
   ]
 }
