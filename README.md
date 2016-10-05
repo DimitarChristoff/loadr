@@ -1,6 +1,4 @@
-# loadr
-
-[![Dependency Status](https://david-dm.org/DimitarChristoff/loadr.svg)](https://david-dm.org/DimitarChristoff/loadr)
+# loadr [![Build Status](https://travis-ci.org/dimitarchristoff/loadr.svg?branch=master)](https://travis-ci.org/dimitarchristoff/loadr) [![Codecov](https://codecov.io/github/dimitarchristoff/loadr/coverage.svg)](https://codecov.io/github/dimitarchristoff/loadr/) [![Dependency Status](https://david-dm.org/DimitarChristoff/loadr.svg)](https://david-dm.org/DimitarChristoff/loadr)
 
 Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!
 
