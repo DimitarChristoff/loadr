@@ -22,7 +22,7 @@ module.exports = {
   output: {
     path: __OUTPUT__,
     publicPath: '/',
-    filename: '[name].min.js',
+    filename: `${__COMPONENT_NAME__}.min.js`,
     library: __COMPONENT_NAME__,
     libraryTarget: 'umd'
   },

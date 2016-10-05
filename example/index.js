@@ -60,7 +60,7 @@ import Loadr from '../src/loadr';
 
     divs.push(div);
 
-    div.className = 'loadr-slug fade-out'
+    div.className = 'loadr-slug fade-out';
     div.innerHTML = i.get();
 
     let x = ~~(Math.random() * max),
