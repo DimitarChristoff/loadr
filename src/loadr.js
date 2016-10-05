@@ -5,94 +5,89 @@ let messages = 'Reticulating Splines,Gathering Goblins,Lifting Weights,Pushing P
  */
 class Loadr {
 
-	/**
-	 * @constructs Loadr
-	 * @param {HTMLElement=} element
-	 * @param {Object=} options
-	 */
-	constructor(element, options = {}){
-		/**
-		 *
-		 * @type {{delay: number, before: string, after: string}}
-		 */
-		Object.assign(this.options = {
-			delay: 1000,
-			before: '',
-			after: '...'
-		}, options);
+  /**
+   * @constructs Loadr
+   * @param {HTMLElement=} element
+   * @param {Object=} options
+   */
+  constructor(element, options = {}){
+    /**
+     *
+     * @type {{delay: number, before: string, after: string}}
+     */
+    Object.assign(this.options = {
+      delay: 1000,
+      before: '',
+      after: '...'
+    }, options);
 
-		// api to access messages array from instance
-		Object.defineProperty(this, 'messages', {
-			get: () => {
-				return messages.slice();
-			},
-			set: (array) => {
-				messages = Array.from(array);
-			},
-			enumerable: false
-		});
+    element && (this.element = element);
+  }
 
-		element && (this.element = element);
-	}
+  get messages(){
+    return messages.slice();
+  }
 
-	/**
-	 * Starts looping messages into an element
-	 * @returns {Loadr}
-	 */
-	start(){
-		this._setLoadMessage();
-		this.timer = setInterval(() =>{
-			this._setLoadMessage();
-		}, this.options.delay);
+  set messages(array){
+    messages = Array.from(array);
+  }
 
-		return this;
-	}
+  /**
+   * Starts looping messages into an element
+   * @returns {Loadr}
+   */
+  start(){
+    this._setLoadMessage();
+    this.timer = setInterval(() =>{
+      this._setLoadMessage();
+    }, this.options.delay);
 
-	/**
-	 * Stops looping of messages
-	 * @returns {Loadr}
-	 */
-	stop(){
-		clearTimeout(this.timer);
+    return this;
+  }
 
-		return this;
-	}
+  /**
+   * Stops looping of messages
+   * @returns {Loadr}
+   */
+  stop(){
+    clearTimeout(this.timer);
 
-	/**
-	 * Just return a message that is different from the last message returned.
-	 * @param {*=} r
-	 * @returns {String}
-	 */
-	get(r){
-		while ((r = this._rand()) == this.last);
+    return this;
+  }
 
-		return messages[this.last = r];
-	}
+  /**
+   * Just return a message that is different from the last message returned.
+   * @param {*=} r
+   * @returns {String}
+   */
+  get(r){
+    while ((r = this._rand()) == this.last);
 
-	/**
-	 * Internal loader of a new message that is different from last one.
-	 * @param {*=} o
-	 * @returns {Loadr}
-	 * @private
-	 */
-	_setLoadMessage(o){
-		o = this.options;
+    return messages[this.last = r];
+  }
 
-		this.element.innerHTML = o.before + this.get() + o.after;
+  /**
+   * Internal loader of a new message that is different from last one.
+   * @param {*=} o
+   * @returns {Loadr}
+   * @private
+   */
+  _setLoadMessage(o){
+    o = this.options;
 
-		return this;
-	}
+    this.element.innerHTML = o.before + this.get() + o.after;
 
-	/**
-	 * Generates a random number within the size of the messages
-	 * @returns {number}
-	 * @private
-	 */
-	_rand(){
-		return ~~(Math.random() * messages.length);
-	}
+    return this;
+  }
+
+  /**
+   * Generates a random number within the size of the messages
+   * @returns {number}
+   * @private
+   */
+  _rand(){
+    return ~~(Math.random() * messages.length);
+  }
 }
 
-typeof define === 'function' && define.amd && define(() => Loadr);
 export default Loadr;
-window && (window.Loadr = Loadr);

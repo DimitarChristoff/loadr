@@ -1,0 +1,6 @@
+node_modules/**
+tests/**
+dist/**
+coverage/**
+config/
+webpack.config.js

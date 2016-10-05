@@ -1,7 +1,6 @@
 # loadr
 
 [![Dependency Status](https://david-dm.org/DimitarChristoff/loadr.svg)](https://david-dm.org/DimitarChristoff/loadr)
-[![devDependency Status](https://david-dm.org/DimitarChristoff/loadr/dev-status.svg)](https://david-dm.org/DimitarChristoff/loadr#info=devDependencies)
 
 Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!
 
@@ -15,10 +14,24 @@ Works under ES6 or ES5, browser or nodejs -- no external dependencies.
 
 ## usage
 
-Typical use with defaults just changing text
+```sh
+$ npm i randloadr --save
+```
+
+Via ES2015+
+
+```js
+import Loadr from 'randloadr'; // or require('randloadr')
+
+const instance = new Loadr(document.querySelector('.loader'));
+instance.start();
+instance.stop();
+```
+
+In ES5 from global object
 
 ```javascript
-var instance = new Loadr(document.querySelector('.loader');
+var instance = new Loadr(document.querySelector('.loader'));
 
 instance.start();
 // ...
@@ -28,30 +41,28 @@ instance.stop();
 Change some options
 
 ```javascript
-var instance = new Loadr(document.querySelector('.loader', {
+const instance = new Loadr(document.querySelector('.loader', {
 	delay: 2000,
-	before: '<i class="fa fa-spin fa-pulse"></i> '
+	before: '<i class="fa fa-spin fa-pulse" /> '
 });
 ```
 
 Just get random excuse messages
 
 ```javascript
-var instance = new Loadr();
-
-console.log(i.get());
+const instance = new Loadr();
+console.log(instance.get());
 ```
 
 ## installing
 
-You can install via npm, bower or download the script.
+You can also install via bower or download the script.
 
 ```
-$ npm install randloadr
 $ bower install loadr
 ```
 
-`src/loadr.js` is ES6 raw, `dist/loadr.js` is the minified ES5 version.
+`src/loadr.js` is ES6 raw, `dist/loadr.min.js` is the minified ES5 version.
 
 ## credits
 
