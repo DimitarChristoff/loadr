@@ -1,9 +1,9 @@
-const path                = require('path')
-const webpack             = require('webpack')
+const path                = require('path');
+const webpack             = require('webpack');
 
-const __OUTPUT__          = path.join(__dirname, '..', 'dist')
-const __INPUT__           = path.join(__dirname, '..', 'src')
-const __COMPONENT_NAME__  = 'loadr'
+const __OUTPUT__          = path.join(__dirname, '..', 'dist');
+const __INPUT__           = path.join(__dirname, '..', 'src');
+const __COMPONENT_NAME__  = 'loadr';
 
 module.exports = {
 
@@ -43,13 +43,6 @@ module.exports = {
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false, //prod
-      mangle: {
-        screw_ie8: true,
-        keep_fnames: true
-      }, //prod
-      compress: {
-        screw_ie8: true
-      }, //prod
       comments: false //prod
     })
   ],
@@ -57,4 +50,4 @@ module.exports = {
   resolve: {
     extensions: ['', '.js']
   }
-}
+};

@@ -6,6 +6,12 @@ import Loadr from '../src/loadr';
   i.start();
 }
 
+{
+  const i = new Loadr(document.querySelector('section.one'));
+  i.start();
+}
+
+
 // manual speed control
 {
   const i = new Loadr(document.querySelector('section.two div.loader-text'), {
@@ -44,9 +50,9 @@ import Loadr from '../src/loadr';
     };
 
     return () =>{
-      var h = randomInt(0, 360);
-      var s = randomInt(42, 98);
-      var l = randomInt(40, 90);
+      const h = randomInt(0, 360);
+      const s = randomInt(42, 98);
+      const l = randomInt(40, 90);
       return `hsl(${h},${s}%,${l}%)`;
     };
   })();

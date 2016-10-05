@@ -10,7 +10,7 @@ class Loadr {
    * @param {HTMLElement=} element
    * @param {Object=} options
    */
-  constructor(element, options = {}){
+  constructor(element, ...options){
     /**
      *
      * @type {{delay: number, before: string, after: string}}
@@ -19,7 +19,7 @@ class Loadr {
       delay: 1000,
       before: '',
       after: '...'
-    }, options);
+    }, options ? options[0] : {});
 
     element && (this.element = element);
   }
@@ -61,9 +61,10 @@ class Loadr {
    * @returns {String}
    */
   get(r){
+    const { before, after } = this.options;
     while ((r = this._rand()) == this.last);
 
-    return messages[this.last = r];
+    return before + messages[this.last = r] + after;
   }
 
   /**
@@ -72,9 +73,7 @@ class Loadr {
    * @returns {Loadr}
    * @private
    */
-  _setLoadMessage(o){
-    o = this.options;
-
+  _setLoadMessage(o = this.options){
     this.element.innerHTML = o.before + this.get() + o.after;
 
     return this;

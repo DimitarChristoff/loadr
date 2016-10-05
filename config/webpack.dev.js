@@ -1,8 +1,8 @@
-const path                = require('path')
-const webpack             = require('webpack')
-const pkg                 = require('../package.json')
+const path                = require('path');
+const webpack             = require('webpack');
+const pkg                 = require('../package.json');
 
-const __DEV_INPUT__       = path.join(__dirname, '..', 'example')
+const __DEV_INPUT__       = path.join(__dirname, '..', 'example');
 
 module.exports = {
 
@@ -15,7 +15,7 @@ module.exports = {
   },
 
   output: {
-    filename: `[name].js`
+    filename: '[name].js'
   },
 
   module: {
@@ -37,10 +37,7 @@ module.exports = {
     staticOptions: {},
   },
 
-  plugins: [
-  ],
-
   resolve: {
     extensions: ['', '.js']
   }
-}
+};
