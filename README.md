@@ -26,22 +26,24 @@ instance.start();
 instance.stop();
 ```
 
-In ES5 from global object
+In ES5 from global object (transpiles to window.loadr.default because of modules)
 
 ```javascript
-var instance = new Loadr(document.querySelector('.loader'));
+(function(Loadr){
+  var instance = new Loadr(document.querySelector('.loader'));
 
-instance.start();
-// ...
-instance.stop();
+  instance.start();
+  // ...
+  instance.stop();
+}(this.loadr.default);
 ```
 
 Change some options
 
 ```javascript
 const instance = new Loadr(document.querySelector('.loader', {
-	delay: 2000,
-	before: '<i class="fa fa-spin fa-pulse" /> '
+  delay: 2000,
+  before: '<i class="fa fa-spin fa-pulse" /> '
 });
 ```
 
