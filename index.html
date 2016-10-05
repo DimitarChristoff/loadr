@@ -1,37 +1,39 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
+    <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Loadr by DimitarChristoff</title>
-
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/github-light.css">
-    <meta name="viewport" content="width=device-width">
+    <link href='https://fonts.googleapis.com/css?family=Chivo:900' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-dark.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <title>Loadr by DimitarChristoff</title>
   </head>
+
   <body>
-    <div class="wrapper">
-      <header>
-        <h1>Loadr</h1>
-        <p>Loading messages can be fun, not just spinners</p>
+    <div id="container">
+      <div class="inner">
 
-        <p class="view"><a href="https://github.com/DimitarChristoff/loadr">View the Project on GitHub <small>DimitarChristoff/loadr</small></a></p>
+        <header>
+          <h1>Loadr</h1>
+          <h2>Loading messages can be fun, not just spinners</h2>
+        </header>
 
+        <section id="downloads" class="clearfix">
+          <a href="https://github.com/DimitarChristoff/loadr/zipball/master" id="download-zip" class="button"><span>Download .zip</span></a>
+          <a href="https://github.com/DimitarChristoff/loadr/tarball/master" id="download-tar-gz" class="button"><span>Download .tar.gz</span></a>
+          <a href="https://github.com/DimitarChristoff/loadr" id="view-on-github" class="button"><span>View on GitHub</span></a>
+        </section>
 
-        <ul>
-          <li><a href="https://github.com/DimitarChristoff/loadr/zipball/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/DimitarChristoff/loadr/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="https://github.com/DimitarChristoff/loadr">View On <strong>GitHub</strong></a></li>
-        </ul>
-      </header>
-      <section>
-        <h1>
-<a id="loadr" class="anchor" href="#loadr" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>loadr</h1>
+        <hr>
 
-<p><a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a></p>
+        <section id="main_content">
+          <h1>
+<a id="loadr---" class="anchor" href="#loadr---" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>loadr <a href="https://travis-ci.org/DimitarChristoff/loadr"><img src="https://travis-ci.org/DimitarChristoff/loadr.svg?branch=master" alt="Build Status"></a> <a href="https://codecov.io/github/DimitarChristoff/loadr/"><img src="https://codecov.io/github/DimitarChristoff/loadr/coverage.svg" alt="Codecov"></a> <a href="https://david-dm.org/DimitarChristoff/loadr"><img src="https://david-dm.org/DimitarChristoff/loadr.svg" alt="Dependency Status"></a>
+</h1>
 
 <p>Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!</p>
 
@@ -56,19 +58,21 @@
 <span class="pl-smi">instance</span>.<span class="pl-c1">start</span>();
 <span class="pl-smi">instance</span>.<span class="pl-c1">stop</span>();</pre></div>
 
-<p>In ES5 from global object</p>
+<p>In ES5 from global object (transpiles to window.loadr.default because of modules)</p>
 
-<div class="highlight highlight-source-js"><pre><span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>));
+<div class="highlight highlight-source-js"><pre>(<span class="pl-k">function</span>(<span class="pl-smi">Loadr</span>){
+  <span class="pl-k">var</span> instance <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>));
 
-<span class="pl-smi">instance</span>.<span class="pl-c1">start</span>();
-<span class="pl-c">// ...</span>
-<span class="pl-smi">instance</span>.<span class="pl-c1">stop</span>();</pre></div>
+  <span class="pl-smi">instance</span>.<span class="pl-c1">start</span>();
+  <span class="pl-c">// ...</span>
+  <span class="pl-smi">instance</span>.<span class="pl-c1">stop</span>();
+}(<span class="pl-v">this</span>.<span class="pl-smi">loadr</span>.<span class="pl-smi">default</span>);</pre></div>
 
 <p>Change some options</p>
 
 <div class="highlight highlight-source-js"><pre><span class="pl-k">const</span> <span class="pl-c1">instance</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">Loadr</span>(<span class="pl-c1">document</span>.<span class="pl-c1">querySelector</span>(<span class="pl-s"><span class="pl-pds">'</span>.loader<span class="pl-pds">'</span></span>, {
-    delay<span class="pl-k">:</span> <span class="pl-c1">2000</span>,
-    before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse" /&gt; <span class="pl-pds">'</span></span>
+  delay<span class="pl-k">:</span> <span class="pl-c1">2000</span>,
+  before<span class="pl-k">:</span> <span class="pl-s"><span class="pl-pds">'</span>&lt;i class="fa fa-spin fa-pulse" /&gt; <span class="pl-pds">'</span></span>
 });</pre></div>
 
 <p>Just get random excuse messages</p>
@@ -302,13 +306,15 @@
 <li>Thinking of Witty Text</li>
 </ul>
 </blockquote>
-      </section>
-      <footer>
-        <p>This project is maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a></p>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+        </section>
+
+        <footer>
+          Loadr is maintained by <a href="https://github.com/DimitarChristoff">DimitarChristoff</a><br>
+          This page was generated by <a href="https://pages.github.com">GitHub Pages</a>. Tactile theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.
+        </footer>
+
+        
+      </div>
     </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
   </body>
 </html>
