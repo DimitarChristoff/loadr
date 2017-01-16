@@ -16,7 +16,7 @@ Works under ES6 or ES5, browser or nodejs -- no external dependencies.
 $ npm i randloadr --save
 ```
 
-Via ES2015+
+Via ES2016+
 
 ```js
 import Loadr from 'randloadr'; // or require('randloadr')
