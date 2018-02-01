@@ -1,4 +1,4 @@
-# loadr [![Build Status](https://travis-ci.org/DimitarChristoff/loadr.svg?branch=master)](https://travis-ci.org/DimitarChristoff/loadr) [![Codecov](https://codecov.io/github/DimitarChristoff/loadr/coverage.svg)](https://codecov.io/github/DimitarChristoff/loadr/) [![Dependency Status](https://david-dm.org/DimitarChristoff/loadr.svg)](https://david-dm.org/DimitarChristoff/loadr)
+# loadr [![Build Status](https://travis-ci.org/DimitarChristoff/loadr.svg?branch=master)](https://travis-ci.org/DimitarChristoff/loadr) [![Codecov](https://codecov.io/github/DimitarChristoff/loadr/coverage.svg)](https://codecov.io/github/DimitarChristoff/loadr/)
 
 Not just another spinner: keep your visitors amused while your app is loading something. Over 200 random messages to show!
 
@@ -8,7 +8,7 @@ Not just another spinner: keep your visitors amused while your app is loading so
 
 It can auto rotate messages given an element or just return random messages.
 
-Works under ES6 or ES5, browser or nodejs -- no external dependencies.
+Works under ES6 or ES5, browser or nodejs -- no external dependencies. Easily usable in React.js
 
 ## usage
 
@@ -16,7 +16,7 @@ Works under ES6 or ES5, browser or nodejs -- no external dependencies.
 $ npm i randloadr --save
 ```
 
-Via ES2015+
+Via ES2016+
 
 ```js
 import Loadr from 'randloadr'; // or require('randloadr')
@@ -54,15 +54,41 @@ const instance = new Loadr();
 console.log(instance.get());
 ```
 
+Example as a react component
+
+```jsx
+import React from 'react';
+import Loadr from 'randloadr';
+
+class Loader extends React.Component {
+
+  static defaultProps = {
+    loadrOptions: {}
+  }
+
+  componentDidMount(){
+    if (!this.Element){
+      return;
+    }
+    this.instance = new Loadr(this.Element, this.props.loadrOptions);
+    this.instance.start();
+  }
+
+  componentWillUnmount(){
+    this.instance.stop();
+  }
+
+  render(){
+    return <div className='loader' {...this.props} ref={el => this.Element = el} />;
+  }
+}
+```
+
 ## installing
 
 You can also install via bower or download the script.
 
-```
-$ bower install loadr
-```
-
-`src/loadr.js` is ES6 raw, `dist/loadr.min.js` is the minified ES5 version.
+`src/loadr.js` is ES2016 and stage-3 raw, `dist/loadr.min.js` is the minified ES5 version.
 
 ## credits
 
