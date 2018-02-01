@@ -8,8 +8,6 @@ module.exports = {
 
   devtool: 'eval-source-map',
 
-  context: __dirname,
-
   entry: {
     examples: [path.join(__DEV_INPUT__, 'index.js')]
   },
@@ -21,10 +19,20 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.(js|jsx)$/,
-      exclude: /(node_modules)/,
-      loader: 'babel',
+      include: [
+        path.join(__dirname, 'src'),
+        path.join(__dirname, 'tests'),
+        path.join(__dirname, 'examples')
+      ],
+      loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'stage-0']
+        plugins: ['transform-runtime'],
+        presets: [
+          ['env', {
+            useBuiltIns: true
+          }],
+          'stage-0'
+        ]
       }
     }]
   },
@@ -38,6 +46,14 @@ module.exports = {
   },
 
   resolve: {
-    extensions: ['', '.js']
-  }
+    extensions: ['.js']
+  },
+
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        'NODE_ENV': '"development"'
+      }
+    })
+  ]
 };

@@ -1,3 +1,5 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`loadr tests instantiates correctly and has pre-defined messages 1`] = `
 Array [
   "Reticulating Splines",
@@ -201,6 +203,6 @@ Array [
   "Automating Processes",
   "Attacking Godzilla",
   "Carbonating Soda",
-  "Thinking of Witty Text"
+  "Thinking of Witty Text",
 ]
 `;

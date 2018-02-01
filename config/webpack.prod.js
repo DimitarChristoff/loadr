@@ -9,8 +9,6 @@ module.exports = {
 
   devtool: 'source-map',
 
-  debug: true,
-
   context: __dirname,
 
   entry: {
@@ -30,17 +28,22 @@ module.exports = {
   module: {
     loaders: [{
       test: /\.(js|jsx)$/,
-      exclude: /(node_modules)/,
-      loader: 'babel',
+      exclude: /node_modules/,
+      loader: 'babel-loader',
       query: {
-        presets: ['es2015', 'stage-0']
+        plugins: ['transform-runtime'],
+        presets: [
+          ['env', {
+            useBuiltIns: true
+          }],
+          'stage-0'
+        ]
       }
     }]
   },
 
   plugins: [
-    new webpack.optimize.OccurenceOrderPlugin(),
-    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.ModuleConcatenationPlugin(),
     new webpack.optimize.UglifyJsPlugin({
       beautify: false, //prod
       comments: false //prod
@@ -48,6 +51,6 @@ module.exports = {
   ],
 
   resolve: {
-    extensions: ['', '.js']
+    extensions: ['.js']
   }
 };
