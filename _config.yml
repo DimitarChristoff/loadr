@@ -1,0 +1,8 @@
+title: Loadr
+description: Loading messages can be fun, not just spinners
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-tactile
+
+gems:
+  - jekyll-mentions
