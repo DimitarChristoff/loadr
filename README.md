@@ -8,7 +8,7 @@ Not just another spinner: keep your visitors amused while your app is loading so
 
 It can auto rotate messages given an element or just return random messages.
 
-Works under ES6 or ES5, browser or nodejs -- no external dependencies.
+Works under ES6 or ES5, browser or nodejs -- no external dependencies. Easily usable in React.js
 
 ## usage
 
@@ -57,8 +57,8 @@ console.log(instance.get());
 Example as a react component
 
 ```jsx
-import React from 'react'
-import Loadr from 'randloadr'
+import React from 'react';
+import Loadr from 'randloadr';
 
 class Loader extends React.Component {
 
@@ -68,17 +68,18 @@ class Loader extends React.Component {
 
   componentDidMount(){
     if (!this.Element){
-      return
+      return;
     }
-    this.instance = new Loadr(this.Element, this.props.loadrOptions)
+    this.instance = new Loadr(this.Element, this.props.loadrOptions);
+    this.instance.start();
   }
 
   componentWillUnmount(){
-    this.instance.stop()
+    this.instance.stop();
   }
 
   render(){
-    return <div className='loader' {...this.props} ref={el => this.Element = el} />
+    return <div className='loader' {...this.props} ref={el => this.Element = el} />;
   }
 }
 ```
