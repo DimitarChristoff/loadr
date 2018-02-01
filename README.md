@@ -54,15 +54,40 @@ const instance = new Loadr();
 console.log(instance.get());
 ```
 
+Example as a react component
+
+```jsx
+import React from 'react'
+import Loadr from 'randloadr'
+
+class Loader extends React.Component {
+
+  static defaultProps = {
+    loadrOptions: {}
+  }
+
+  componentDidMount(){
+    if (!this.Element){
+      return
+    }
+    this.instance = new Loadr(this.Element, this.props.loadrOptions)
+  }
+
+  componentWillUnmount(){
+    this.instance.stop()
+  }
+
+  render(){
+    return <div className='loader' {...this.props} ref={el => this.Element = el} />
+  }
+}
+```
+
 ## installing
 
 You can also install via bower or download the script.
 
-```
-$ bower install loadr
-```
-
-`src/loadr.js` is ES6 raw, `dist/loadr.min.js` is the minified ES5 version.
+`src/loadr.js` is ES2016 and stage-3 raw, `dist/loadr.min.js` is the minified ES5 version.
 
 ## credits
 
